@@ -23,7 +23,7 @@ camera.position.z = 5;
 const loader = new GLTFLoader();
 let load;
 loader.load(
-  "/assets/f1.glb",
+  "/assests/f1.glb",
   (gltf) => {
     load = gltf.scene;
     scene.add(gltf.scene);
@@ -52,10 +52,10 @@ function onmousemove(e) {
       x: e.clientX - previousMousePos.x,
       y: e.clientY - previousMousePos.y
     }
-    console.log(load.rotation.x+" x&y"+ load.rotation.y)
+    //console.log(load.rotation.x+" x&y"+ load.rotation.y)
     load.rotation.y +=  deltaMove.x *0.01;
     load.rotation.x += deltaMove.y *0.01;
-    console.log("moving....");
+    //console.log("moving....");
 
     previousMousePos= {x: e.clientX, y:e.clientY};
     
